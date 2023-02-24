@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_scale_tap/flutter_scale_tap.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:avshop/generated/app_utils.dart';
 
 import '../generated/PColor.dart';
 import '../generated/assets.dart';
@@ -38,10 +39,17 @@ class GradientButton extends StatelessWidget {
                 ],
           ),
           border: Border.all(color: PColors.blueMain),
-          borderRadius: const BorderRadius.all(Radius.circular(10)),
+          borderRadius: BorderRadius.all(
+            Radius.circular(
+              10 * responsiveSize.width,
+            ),
+          ),
         ),
         child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 15),
+          padding: EdgeInsets.symmetric(
+            horizontal: 20 * responsiveSize.width,
+            vertical: 20 * responsiveSize.height,
+          ),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
@@ -49,35 +57,35 @@ class GradientButton extends StatelessWidget {
                 visible: _checkVisibleLeft(),
                 child: SvgPicture.asset(
                   assetsIcon,
-                  width: 25,
-                  height: 25,
+                  width: 25 * responsiveSize.width,
+                  height: 25 * responsiveSize.height,
                   color: Colors.white,
                 ),
               ),
               Visibility(
                 visible: _checkVisibleLeft(),
-                child: const SizedBox(
-                  width: 10,
+                child: SizedBox(
+                  width: 10 * responsiveSize.width,
                 ),
               ),
               Text(
                 title,
                 style: Theme.of(context).textTheme.headline6!.copyWith(
-                  color: Colors.white,
-                  fontFamily: Assets.fontsSVNGilroyMedium,
-                ),
+                      color: Colors.white,
+                      fontFamily: Assets.fontsSVNGilroyMedium,
+                    ),
               ),
               Visibility(
                 visible: _checkVisibleRight(),
-                child: const SizedBox(
-                  width: 10,
+                child: SizedBox(
+                  width: 10 * responsiveSize.width,
                 ),
               ),
               Visibility(
                 visible: _checkVisibleRight(),
                 child: SvgPicture.asset(
                   assetsIcon,
-                  width: 25,
+                  width: 25 * responsiveSize.width,
                 ),
               ),
             ],

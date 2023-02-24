@@ -6,6 +6,7 @@ class Assets {
   static const String fontsSVNGilroyRegular = 'SVN-Regular';
   static const String fontsSVNGilroySemiBold = 'SVN-SemiBold';
 
+  static const String svgsIcUnion = 'assets/svgs/ic_union.svg';
 
-  static const String pngMegashopBg = 'assets/images/megashop_bg.png';
+  static const String pngAVShopBg = 'assets/images/avshop_bg.png';
 }

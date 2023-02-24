@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:megashop/generated/app_utils.dart';
+import 'package:avshop/generated/app_utils.dart';
 
 import '../../../generated/PColor.dart';
 import '../../../generated/assets.dart';
@@ -25,15 +25,9 @@ class PhoneTextField extends StatelessWidget {
           15 * responsiveSize.width,
         ),
       ),
-      child: TextFormField(
+      child: TextField(
         controller: phoneController,
         keyboardType: TextInputType.number,
-        validator: (value) {
-          if (value == null || value.isEmpty) {
-            return 'Please enter your phone number';
-          }
-          return null;
-        },
         decoration: const InputDecoration(
           border: InputBorder.none,
           hintText: 'Phone number',

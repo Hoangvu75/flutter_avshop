@@ -1,10 +1,9 @@
+import 'package:avshop/screens/signUpScreen/sign_up_screen_body.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
-import 'login_screen_body.dart';
-
-class LoginScreen extends StatelessWidget {
-  const LoginScreen({Key? key}) : super(key: key);
+class SignUpScreen extends StatelessWidget {
+  const SignUpScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -16,7 +15,7 @@ class LoginScreen extends StatelessWidget {
         onTap: () {
           FocusManager.instance.primaryFocus?.unfocus();
         },
-        child: const LoginScreenBody(),
+        child: const SignUpScreenBody(),
       ),
     );
   }

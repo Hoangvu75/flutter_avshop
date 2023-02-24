@@ -11,4 +11,5 @@ class PColors {
   static Color gradientButtonStart = const Color.fromRGBO(50, 0, 150, 1.0);
   static Color gradientButtonEnd = const Color.fromRGBO(0, 75, 150, 1.0);
   static Color blueMain = const Color.fromRGBO(33, 57, 146, 1.0);
+  static Color lightOrange = const Color.fromRGBO(255, 77, 0, 1.0);
 }

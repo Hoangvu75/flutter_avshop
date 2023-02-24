@@ -1,5 +1,5 @@
-name: megashop
-description: Megashop
+name: avshop
+description: AVShop
 
 # The following line prevents the package from being accidentally published to
 # pub.dev using `flutter pub publish`. This is preferred for private packages.
@@ -55,6 +55,8 @@ dependencies:
   flutter_bloc: ^8.1.1
   shimmer: ^2.0.0
   flutter_easyloading: ^3.0.5
+  page_transition: ^2.0.9
+  get: ^4.6.5
 
 dev_dependencies:
   flutter_test:
@@ -66,6 +68,8 @@ dev_dependencies:
   # package. See that file for information about deactivating specific lint
   # rules and activating additional ones.
   flutter_lints: ^2.0.0
+  build_runner: ^2.3.3
+  json_serializable: ^6.1.5
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
@@ -83,6 +87,7 @@ flutter:
     - assets/
     - assets/icons/
     - assets/images/
+    - assets/svgs/
 
   fonts:
     - family: SVN-Bold

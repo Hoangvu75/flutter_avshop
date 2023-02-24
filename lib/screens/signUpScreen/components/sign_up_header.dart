@@ -1,10 +1,10 @@
+import 'package:avshop/generated/app_utils.dart';
 import 'package:flutter/material.dart';
-import 'package:megashop/generated/app_utils.dart';
 
 import '../../../generated/assets.dart';
 
-class LoginHeader extends StatelessWidget {
-  const LoginHeader({
+class SignUpHeader extends StatelessWidget {
+  const SignUpHeader({
     Key? key,
   }) : super(key: key);
 
@@ -16,7 +16,7 @@ class LoginHeader extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Text(
-            "Login",
+            "Sign up",
             style: Theme.of(context).textTheme.headline1!.copyWith(
               color: Colors.white,
               fontFamily: Assets.fontsSVNGilroySemiBold,
@@ -27,7 +27,7 @@ class LoginHeader extends StatelessWidget {
             height: 20 * responsiveSize.height,
           ),
           Text(
-            "Let's connect with megashop\nand explore technology",
+            "Let's connect with AVShop\nand explore AV world",
             style: Theme.of(context).textTheme.headline6!.copyWith(
               color: Colors.white,
               fontFamily: Assets.fontsSVNGilroyRegular,

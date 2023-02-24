@@ -1,11 +1,16 @@
 import 'package:flutter/material.dart';
 
-import 'components/login_body.dart';
-import 'components/login_header.dart';
+import 'components/sign_up_body.dart';
+import 'components/sign_up_header.dart';
 
-class LoginScreenBody extends StatelessWidget {
-  const LoginScreenBody({Key? key}) : super(key: key);
+class SignUpScreenBody extends StatefulWidget {
+  const SignUpScreenBody({Key? key}) : super(key: key);
 
+  @override
+  State<SignUpScreenBody> createState() => _SignUpScreenBodyState();
+}
+
+class _SignUpScreenBodyState extends State<SignUpScreenBody> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -27,9 +32,9 @@ class LoginScreenBody extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.stretch,
             mainAxisAlignment: MainAxisAlignment.start,
-            children: const <Widget>[
-              LoginHeader(),
-              LoginBody(),
+            children: <Widget>[
+              const SignUpHeader(),
+              SignUpBody(),
             ],
           ),
         ),

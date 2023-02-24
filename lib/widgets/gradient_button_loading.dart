@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_scale_tap/flutter_scale_tap.dart';
-import 'package:megashop/generated/app_utils.dart';
-import 'package:megashop/generated/assets.dart';
+import 'package:avshop/generated/app_utils.dart';
+import 'package:avshop/generated/assets.dart';
 
 import '../generated/PColor.dart';
 
@@ -24,7 +24,6 @@ class GradientButtonLoading extends StatelessWidget {
         onPressed: () {},
         enableFeedback: false,
         child: Container(
-          height: 60 * responsiveSize.height,
           decoration: BoxDecoration(
             gradient: LinearGradient(
               begin: Alignment.centerLeft,
@@ -42,30 +41,21 @@ class GradientButtonLoading extends StatelessWidget {
           ),
           child: Padding(
             padding: EdgeInsets.symmetric(
+              vertical: 20 * responsiveSize.height,
               horizontal: 20 * responsiveSize.width,
             ),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Text(
-                  title,
-                  style: Theme.of(context).textTheme.headline6!.copyWith(
-                        color: Colors.white,
-                        fontFamily: Assets.fontsSVNGilroyMedium,
-                      ),
-                ),
-                SizedBox(
-                  width: 10 * responsiveSize.width,
-                ),
                 Center(
                   heightFactor: 1,
                   widthFactor: 1,
                   child: SizedBox(
                     height: 20 * responsiveSize.width,
                     width: 20 * responsiveSize.width,
-                    child: CircularProgressIndicator(
+                    child: const CircularProgressIndicator(
                       strokeWidth: 2,
-                      color: PColors.blueMain,
+                      color: Colors.white,
                     ),
                   ),
                 )
@@ -78,7 +68,6 @@ class GradientButtonLoading extends StatelessWidget {
       return ScaleTap(
         onPressed: onTap,
         child: Container(
-          height: 60 * responsiveSize.height,
           decoration: BoxDecoration(
             gradient: LinearGradient(
               begin: Alignment.centerLeft,
@@ -96,6 +85,7 @@ class GradientButtonLoading extends StatelessWidget {
           ),
           child: Padding(
             padding: EdgeInsets.symmetric(
+              vertical: 20 * responsiveSize.height,
               horizontal: 20 * responsiveSize.width,
             ),
             child: Center(

@@ -4,19 +4,19 @@ import '../../../generated/PColor.dart';
 import '../../../generated/app_utils.dart';
 import '../../../generated/assets.dart';
 
-class PasswordTextField extends StatefulWidget {
-  const PasswordTextField({
+class ReEnterPasswordTextField extends StatefulWidget {
+  const ReEnterPasswordTextField({
     Key? key,
-    required this.passwordController,
+    required this.reEnterPasswordController,
   }) : super(key: key);
 
-  final TextEditingController passwordController;
+  final TextEditingController reEnterPasswordController;
 
   @override
-  State<PasswordTextField> createState() => _PasswordTextFieldState();
+  State<ReEnterPasswordTextField> createState() => _ReEnterPasswordTextFieldState();
 }
 
-class _PasswordTextFieldState extends State<PasswordTextField> {
+class _ReEnterPasswordTextFieldState extends State<ReEnterPasswordTextField> {
   bool obscureText = true;
 
   void togglePasswordVisibility() {
@@ -38,18 +38,12 @@ class _PasswordTextFieldState extends State<PasswordTextField> {
           15 * responsiveSize.width,
         ),
       ),
-      child: TextFormField(
-        controller: widget.passwordController,
+      child: TextField(
+        controller: widget.reEnterPasswordController,
         obscureText: obscureText,
-        validator: (value) {
-          if (value == null || value.isEmpty) {
-            return 'Please enter your password';
-          }
-          return null;
-        },
         decoration: InputDecoration(
           border: InputBorder.none,
-          hintText: 'Password',
+          hintText: 'Re-enter Password',
           suffixIcon: IconButton(
             icon: Icon(
               obscureText ? Icons.visibility_off : Icons.visibility,
